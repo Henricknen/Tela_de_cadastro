@@ -16,10 +16,9 @@ let Validador = {
             }
         }
 
-        send = false;
-        if(send) {
-            form.submit();
-        }
+        if (send) {
+            window.location.href = "https://youtu.be/JVpTp8IHdEg?si=vwG3k1b7Auq05CYv";
+}
     },
     checkInput:(input)=> {
         let rules = input.getAttribute('data-rules');
@@ -60,7 +59,7 @@ let Validador = {
         errorElement.classList.add('error');
         errorElement.innerHTML = error;
 
-        input.parentElement.insertBefore(errorElement, input.ElementSibling);
+        input.parentElement.insertBefore(errorElement, input.nextSibling);
     },
     clearErrors:()=> {
         let inputs = form.querySelectorAll('input');
